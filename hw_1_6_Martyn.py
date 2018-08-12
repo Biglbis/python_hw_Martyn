@@ -22,10 +22,9 @@ print('%s.  a+b*(c/2) = %19.2f'
 
 # 2
 count = count+1
-r = (a ^ 2 + b ^ 2) % 2
-print('%s. (a^2+b^2) mod 2 = %14.2f'
+r = (a ** 2 + b ** 2) % 2
+print('%s. (a^2+b^2)%%2 = %18.2f'
       % (count, r))
-# Вопрос! Не работало, когда в print в формуле писала - %2, а не mod2
 
 # 3
 count = count+1
@@ -44,7 +43,7 @@ count = count+1
 r = math.fabs(a - b) / (a + b) ** 3 - math.cos(c)
 print('%s. |a-b|/(a+b)^3-cos(c) =  %8.2f'
       % (count, r))
-# Вопрос! Не работало, когда в print в формуле писала - ^3, а не **3
+
 
 # 6
 count = count+1
