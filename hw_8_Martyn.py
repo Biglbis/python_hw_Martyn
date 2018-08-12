@@ -6,6 +6,6 @@
 name = 'Mark Zuckerberg'
 name_idx = name.find(' ')
 new_name = name[name_idx:] + ' ' + name[:name_idx]
-print(name, 'is the same as',new_name)
+print(name, 'is the same as', new_name)
 
 
