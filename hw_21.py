@@ -11,20 +11,28 @@ print('A')
 def get_max_digit_a(number):
     print(number)
     num_str = str(number)
-    max_num = num_str[0]
+    max_num = int (num_str[0])
     for char in num_str:
-        if int(char) > int (max_num):
+        if int(char) > max_num:
             max_num = int(char)
     return max_num
 
 print ('Max digit =', get_max_digit_a(random.randint(10**11, 10**12)))
 
-'''
+
 print('B')
+
 def get_max_digit_b(number):
     print(number)
     max_num = number %10
+
+    for i in range (0, 12):
+        digit = number % 10
+        if digit > max_num:
+            max_num = digit
+        number = number // 10
+
     return max_num
 
+
 print ('Max digit =', get_max_digit_b(random.randint(10**11, 10**12)))
-'''
