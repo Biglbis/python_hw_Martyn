@@ -53,5 +53,13 @@ def calc_frequency(lst):
 
 print (calc_frequency(lst))
 
+"""
+lst = [random.randint(-1, 1) for i in range(11)]
+stats = [0, 0, 0]
+for elem in lst:
+    stats[elem +1] += 1
 
-
+if stats[0] > stats[1] and stats[0] > stats[2]:
+    return -1
+...
+"""
