@@ -15,24 +15,38 @@ def gen_password():
     small_letters = 'abcdefghijklmnopqrstuvwxyz'
     big_letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
     numbers = '0123456789'
-    password = ''
+    low_case = 1
+    upp_case = 3
+    num = 2
+    pass_length = 8
 
-    password_lst = [random.randint(1, 3) for i in range(8)]
-    while 1 not in password_lst or 2 not in password_lst or  3  not in password_lst:
-        password_lst = [random.randint(1, 3) for i in range(8)]
+
+    password_lst = [random.randint(low_case, upp_case) for i in range(pass_length)]
+    while low_case not in password_lst or upp_case not in password_lst or  num  not in password_lst:
+        password_lst = [random.randint(low_case, upp_case) for i in range(pass_length)]
 
     for i in range (len(password_lst)):
 
-        if password_lst[i] == 1:
+        if password_lst[i] == low_case:
             password_lst[i] = small_letters[random.randint(0, len(small_letters)-1)]
-        elif password_lst[i] == 2:
+        elif password_lst[i] == num:
             password_lst[i] = big_letters[random.randint(0, len(big_letters)-1)]
-        elif password_lst[i] == 3:
+        elif password_lst[i] == upp_case:
             password_lst[i] = numbers[random.randint(0, len(numbers)-1)]
 
-    for char in password_lst:
-        password += char
+    password = ''.join(password_lst)
 
     return (password)
 
 print (gen_password())
+
+
+"""
+[Biglbis/python_hw_Martyn] New comment on line 22 by dbradul on commit `6876e0e`
+можно еще так:
+```password_lst = [1, 2, 3]
+password_lst += [random.randint(1, 3) for i in range(8) - len(password_lst)]```
+
+[Biglbis/python_hw_Martyn] New comment on line 34 by dbradul on commit `6876e0e`
+password = ''.join(password_lst)
+"""b
