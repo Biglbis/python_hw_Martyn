@@ -13,6 +13,7 @@
 
 import random
 
+"""
 lst = []
 for i in range (0,11):
     lst.append(random.randint(-1, 1))
@@ -52,14 +53,27 @@ def calc_frequency(lst):
 
 
 print (calc_frequency(lst))
-
 """
+
+
 lst = [random.randint(-1, 1) for i in range(11)]
-stats = [0, 0, 0]
-for elem in lst:
-    stats[elem +1] += 1
 
-if stats[0] > stats[1] and stats[0] > stats[2]:
-    return -1
-...
-"""
+print (lst)
+
+def calc_frequency(lst):
+    stats = [0, 0, 0]
+    for elem in lst:
+        stats[elem +1] += 1
+
+    print (stats)
+
+    if stats[0] > stats[1] and stats[0] > stats[2] and stats[1] != stats[2]:
+        return -1
+    elif stats[1] > stats[0] and stats[1] > stats[2] and stats[0] != stats[2]:
+        return 0
+    elif stats[2] > stats[0] and stats[2] > stats[1] and stats[0] != stats[1]:
+        return 1
+    else:
+        return None
+
+print (calc_frequency(lst))
