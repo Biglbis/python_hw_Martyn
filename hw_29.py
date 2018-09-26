@@ -49,4 +49,4 @@ password_lst += [random.randint(1, 3) for i in range(8) - len(password_lst)]```
 
 [Biglbis/python_hw_Martyn] New comment on line 34 by dbradul on commit `6876e0e`
 password = ''.join(password_lst)
-"""b
+"""

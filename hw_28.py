@@ -50,3 +50,15 @@ def encode(str_to_encode):
 print(encode(input_string))
 
 
+"""
+[Biglbis/python_hw_Martyn] New comment on line 32 by dbradul on commit
+можно так:
+```input_lst = [char for char in str_to_encode]```
+
+или даже так:
+```input_lst = list(str_to_encode)```
+
+[Biglbis/python_hw_Martyn] New comment on line 45 by dbradul on commit
+encoded_str = ''.join(input_lst)
+"""
+

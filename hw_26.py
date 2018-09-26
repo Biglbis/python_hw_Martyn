@@ -77,3 +77,8 @@ def calc_frequency(lst):
         return None
 
 print (calc_frequency(lst))
+
+"""
+[Biglbis/python_hw_Martyn] New comment on line 70 by dbradul on commit `bde3536`
+if stats[0] == max(stats) and stats[1] != stats[2]:
+"""
